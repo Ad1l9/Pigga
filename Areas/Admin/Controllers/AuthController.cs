@@ -72,7 +72,16 @@ namespace Pigga.Areas.Admin.Controllers
                 Surname = vm.Surname
             };
 
-            await _userManager.CreateAsync(user,vm.Password);
+
+            var result=await _userManager.CreateAsync(user,vm.Password);
+            if(!result.Succeeded)
+            {
+                foreach(var error in result.Errors)
+                {
+                    ModelState.AddModelError(String.Empty, error.Description);
+                    return View(vm);
+                }
+            }
             await _userManager.AddToRoleAsync(user, UserRoles.Member.ToString());
 
             await _signInManager.SignInAsync(user, isPersistent: false);
