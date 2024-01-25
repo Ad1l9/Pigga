@@ -12,5 +12,6 @@ namespace Pigga.DAL
         }
 
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Setting> Settings { get; set; }
     }
 }

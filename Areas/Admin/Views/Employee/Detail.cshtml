@@ -1,0 +1,15 @@
+﻿
+@model Employee
+
+<div class="col-md-6 grid-margin stretch-card">
+    <row>
+        <div class="col-6">
+            <img style="width:400px;height:400px" src="~/assets/imgs/@Model.ImageUrl">
+        </div>
+        <div class="col-12"><h2>@Model.Name @Model.Surname</h2></div>
+        <br />
+        <br />
+        <h3 class="col-12">Description</h3>
+        <p>@Model.Description</p>
+    </row>
+</div>

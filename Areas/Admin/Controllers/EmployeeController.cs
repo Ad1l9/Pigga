@@ -137,5 +137,13 @@ namespace Pigga.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+        public async Task<IActionResult> Detail(int id)
+        {
+            if (id <= 0) return BadRequest();
+            Employee existed = await _context.Employees.FirstOrDefaultAsync(e => e.Id == id);
+            if (existed is null) return NotFound();
+            return View(existed);
+        }
     }
 }

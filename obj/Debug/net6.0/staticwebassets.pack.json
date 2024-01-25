@@ -365,8 +365,12 @@
       "PackagePath": "staticwebassets\\assets\\css\\pigga.css"
     },
     {
-      "Id": "C:\\Users\\ca.r215.05\\Desktop\\Pigga\\wwwroot\\assets\\imgs\\System.Func`1[System.Guid].jpg",
-      "PackagePath": "staticwebassets\\assets\\imgs\\System.Func`1[System.Guid].jpg"
+      "Id": "C:\\Users\\ca.r215.05\\Desktop\\Pigga\\wwwroot\\assets\\imgs\\6558dc83-d98b-4f23-9bf7-7d673fc283b9.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\6558dc83-d98b-4f23-9bf7-7d673fc283b9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ca.r215.05\\Desktop\\Pigga\\wwwroot\\assets\\imgs\\85f3cfd6-f473-44b4-a92e-bee72abebec0.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\85f3cfd6-f473-44b4-a92e-bee72abebec0.jpg"
     },
     {
       "Id": "C:\\Users\\ca.r215.05\\Desktop\\Pigga\\wwwroot\\assets\\imgs\\about-1.jpg",

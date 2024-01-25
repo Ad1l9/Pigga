@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/KDwGV6SudszyyKSqb4ETV9/RyHTrp6QMaNEyfPNCYw=",
+  "Hash": "6zT2jc7j3MQN7Q2ZbTYGBchKkuyNw/yJxVeJSHXdkog=",
   "Source": "Pigga",
   "BasePath": "_content/Pigga",
   "Mode": "Default",
@@ -1581,6 +1581,40 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\pigga.css"
     },
     {
+      "Identity": "C:\\Users\\ca.r215.05\\Desktop\\Pigga\\wwwroot\\assets\\imgs\\6558dc83-d98b-4f23-9bf7-7d673fc283b9.jpg",
+      "SourceId": "Pigga",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ca.r215.05\\Desktop\\Pigga\\wwwroot\\",
+      "BasePath": "_content/Pigga",
+      "RelativePath": "assets/imgs/6558dc83-d98b-4f23-9bf7-7d673fc283b9.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\imgs\\6558dc83-d98b-4f23-9bf7-7d673fc283b9.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ca.r215.05\\Desktop\\Pigga\\wwwroot\\assets\\imgs\\85f3cfd6-f473-44b4-a92e-bee72abebec0.jpg",
+      "SourceId": "Pigga",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ca.r215.05\\Desktop\\Pigga\\wwwroot\\",
+      "BasePath": "_content/Pigga",
+      "RelativePath": "assets/imgs/85f3cfd6-f473-44b4-a92e-bee72abebec0.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\imgs\\85f3cfd6-f473-44b4-a92e-bee72abebec0.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ca.r215.05\\Desktop\\Pigga\\wwwroot\\assets\\imgs\\about-1.jpg",
       "SourceId": "Pigga",
       "SourceType": "Discovered",
@@ -2004,23 +2038,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\imgs\\style-4.png"
-    },
-    {
-      "Identity": "C:\\Users\\ca.r215.05\\Desktop\\Pigga\\wwwroot\\assets\\imgs\\System.Func`1[System.Guid].jpg",
-      "SourceId": "Pigga",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ca.r215.05\\Desktop\\Pigga\\wwwroot\\",
-      "BasePath": "_content/Pigga",
-      "RelativePath": "assets/imgs/System.Func`1[System.Guid].jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\imgs\\System.Func`1[System.Guid].jpg"
     },
     {
       "Identity": "C:\\Users\\ca.r215.05\\Desktop\\Pigga\\wwwroot\\assets\\js\\pigga.js",

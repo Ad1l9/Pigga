@@ -11,9 +11,9 @@ namespace Pigga.Areas.Admin.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-        private readonly RoleManager<AppUser> _roleManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public AuthController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<AppUser> roleManager)
+        public AuthController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -96,15 +96,20 @@ namespace Pigga.Areas.Admin.Controllers
             {
                 if(!(await _roleManager.RoleExistsAsync(role.ToString())))
                 {
-                    await _roleManager.CreateAsync(new()
+                    await _roleManager.CreateAsync(new IdentityRole()
                     {
-                        Name = role.ToString()
+                        Name = role.ToString(),
                     });
                 }
             }
             return RedirectToAction("Index", "Home", new { area = "" });
         }
 
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home", new { area = "" });
+        }
         
     }
 }
