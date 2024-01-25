@@ -62,5 +62,80 @@ namespace Pigga.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+
+
+
+
+        public async Task<IActionResult> Update(int id)
+        {
+            if (id <= 0) return BadRequest();
+            Employee existed=await _context.Employees.FirstOrDefaultAsync(e=>e.Id == id);
+            if(existed is null) return NotFound();
+
+            UpdateEmployeeVm vm = new()
+            {
+                Name = existed.Name,
+                Surname = existed.Surname,
+                Description = existed.Description,
+                ImageUrl = existed.ImageUrl,
+                TwitterLink = existed.TwitterLink,
+                InstaLink = existed.InstaLink,
+                GoogleLink = existed.GoogleLink,
+                FbLink = existed.FbLink,
+            };
+            return View(vm);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Update(int id, UpdateEmployeeVm vm)
+        {
+            Employee existed = await _context.Employees.FirstOrDefaultAsync(e => e.Id == id);
+            vm.ImageUrl = existed.ImageUrl;
+            if (!ModelState.IsValid)
+            {
+                return View(vm);
+            }
+            if(vm.Photo is not null)
+            {
+                if (!vm.Photo.ValidateSize(2))
+                {
+                    ModelState.AddModelError("Photo", "Image size is invalid");
+                    return View(vm);
+                }
+                if (!vm.Photo.ValidateType())
+                {
+                    ModelState.AddModelError("Photo", "Image type is invalid");
+                    return View(vm);
+                }
+                existed.ImageUrl.DeleteFile(_env.WebRootPath, "assets", "imgs");
+                string fileName = await vm.Photo.CreateFileAsync(_env.WebRootPath, "assets", "imgs");
+                existed.ImageUrl= fileName;
+            }
+            existed.TwitterLink = vm.TwitterLink;
+            existed.GoogleLink = vm.GoogleLink;
+            existed.FbLink = vm.FbLink;
+            existed.InstaLink = vm.InstaLink;
+
+            existed.UpdatedAt = DateTime.Now;
+            existed.Description = vm.Description;
+            existed.Name = vm.Name;
+            existed.Surname = vm.Surname;
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (id <= 0) return BadRequest();
+            Employee existed = await _context.Employees.FirstOrDefaultAsync(e => e.Id == id);
+            if (existed is null) return NotFound();
+
+            existed.ImageUrl.DeleteFile(_env.WebRootPath, "assets", "imgs");
+            _context.Remove(existed);
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

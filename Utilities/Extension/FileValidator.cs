@@ -31,7 +31,7 @@
         public static async Task<string> CreateFileAsync(this IFormFile file,string root,params string[] folders)
         {
             string fileExtension=Path.GetExtension(file.FileName);
-            string fileName = $"{Guid.NewGuid}{fileExtension}";
+            string fileName = $"{Guid.NewGuid()}{fileExtension}";
 
             string path=CreatePath(root,fileName,folders);
             using (var fs=new FileStream(path,FileMode.Create))
